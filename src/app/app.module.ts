@@ -8,7 +8,7 @@ import { FwModule } from '../fw/fw.module';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent    
   ],
   imports: [
     BrowserModule,
