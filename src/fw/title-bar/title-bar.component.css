@@ -2,9 +2,9 @@
   display: flex;
 }
 .title-bar{
- flex-grow: 1;
- display: flex;
- min-height: 80px;
+  flex-grow: 1;
+  display: flex;
+  min-height: 80px;
 }
 .menu-area {
   display:flex;
