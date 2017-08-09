@@ -8,9 +8,9 @@ import { FrameworkConfigService } from '../fw/services/framework-config.service'
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  //title = 'apka';
-  constructor(private frameworkConfigService: FrameworkConfigService){
-  let config: FrameworkConfigService = {
+ constructor(private frameworkConfigService: FrameworkConfigService) {
+
+  let config:FrameworkConfigService = {
       socialIcons: [
         { imageFile: 'assets/social-fb-bw.png', alt: 'Facebook', link: 'http://www.facebook.com'},
         { imageFile: 'assets/social-google-bw.png', alt: 'Google +', link: 'http://www.google.com' },
