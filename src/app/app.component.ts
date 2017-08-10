@@ -8,10 +8,10 @@ import { FrameworkConfigService, FrameworkConfigSettings } from '../fw/services/
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  
+
   constructor (private frameworkConfigService: FrameworkConfigService ) {
 
-    let config:FrameworkConfigSettings = {
+    const config: FrameworkConfigSettings = {
       socialIcons: [
         { imageFile: 'assets/social-fb-bw.png', alt: 'Facebook', link: 'http://www.facebook.com'},
         { imageFile: 'assets/social-google-bw.png', alt: 'Google +', link: 'http://www.google.com' },
@@ -24,7 +24,5 @@ export class AppComponent {
     };
 
     frameworkConfigService.configure(config);
- 
-
   }
 }

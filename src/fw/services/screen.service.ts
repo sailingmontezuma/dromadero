@@ -11,7 +11,6 @@ export class ScreenService {
     screenHeight = 800;
 
     constructor() {
-
         try {
             this.screenWidth = window.innerWidth;
             this.screenHeight = window.innerHeight;

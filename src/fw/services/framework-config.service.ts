@@ -7,11 +7,11 @@ export interface IconFiles {
 }
 
 export interface FrameworkConfigSettings {
-    showLanguageSelector?: boolean,
-    showUserControls?: boolean,
-    showStatusBar?: boolean,
-    showStatusBarBreakpoint?: number,
-    socialIcons?: Array<IconFiles>
+    showLanguageSelector?: boolean;
+    showUserControls?: boolean;
+    showStatusBar?: boolean;
+    showStatusBarBreakpoint?: number;
+    socialIcons?: Array<IconFiles>;
 }
 
 
@@ -24,7 +24,7 @@ export class FrameworkConfigService {
     showStatusBarBreakpoint = 0;
     socialIcons = new Array<IconFiles>();
 
-    configure(settings: FrameworkConfigSettings) : void {
+    configure(settings: FrameworkConfigSettings): void {
         Object.assign(this, settings);
     }
 
