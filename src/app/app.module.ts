@@ -5,10 +5,16 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { FwModule } from '../fw/fw.module';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { CountriesComponent } from './countries/countries.component';
+import { SettingsComponent } from './settings/settings.component';
 
 @NgModule({
   declarations: [
-    AppComponent    
+    AppComponent,
+    DashboardComponent,
+    CountriesComponent,
+    SettingsComponent    
   ],
   imports: [
     BrowserModule,
