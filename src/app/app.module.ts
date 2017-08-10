@@ -14,7 +14,7 @@ import { SettingsComponent } from './settings/settings.component';
     AppComponent,
     DashboardComponent,
     CountriesComponent,
-    SettingsComponent    
+    SettingsComponent
   ],
   imports: [
     BrowserModule,

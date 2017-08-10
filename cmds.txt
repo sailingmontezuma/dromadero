@@ -1,2 +1,7 @@
- ng g component status-bar --prefix=false --spec=false  --skip-import=true
+ng g component status-bar --prefix=false --spec=false  --skip-import=true
+ng g component settings --spec=false
+ng build
+ng serve
+
+
 
