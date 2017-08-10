@@ -9,9 +9,12 @@ import { FrameworkConfigService } from '../services/framework-config.service';
 })
 export class TopBarComponent implements OnInit {
 
-  constructor(pricate frameworkConfigService: FrameworkConfigService) { }
+    constructor(private frameworkConfigService: FrameworkConfigService) {
 
-  ngOnInit() {
-  }
+
+    }
+
+    ngOnInit() {
+    }
 
 }
