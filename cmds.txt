@@ -1,0 +1,2 @@
+ ng g component status-bar --prefix=false --spec=false  --skip-import=true
+
