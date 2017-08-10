@@ -8,8 +8,7 @@ export class ScreenLarge implements OnDestroy {
   private hasView = false;
   private screenSubscription: Subscription;
 
-  constructor(private viewContainer: ViewContainerRef,
-              private template: TemplateRef<Object>,
+  constructor(private viewContainer: ViewContainerRef, private template: TemplateRef<Object>,
               private screenService: ScreenService) {
 
     this.screenSubscription = screenService.resize$.subscribe(() => this.onResize());
