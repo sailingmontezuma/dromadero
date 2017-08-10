@@ -10,9 +10,7 @@ export class ScreenLarge implements OnDestroy {
 
   constructor(private viewContainer: ViewContainerRef, private template: TemplateRef<Object>,
               private screenService: ScreenService) {
-
     this.screenSubscription = screenService.resize$.subscribe(() => this.onResize());
-
   }
 
   @Input()
