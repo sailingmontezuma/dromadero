@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 
 import { FrameworkConfigService, FrameworkConfigSettings } from '../fw/services/framework-config.service';
 import { MenuService } from '../fw/services/menu.service';
-
+import { initialMenuItems } from './app.menu';
 
 @Component({
   selector: 'app-root',
@@ -27,5 +27,6 @@ export class AppComponent {
     };
 
     frameworkConfigService.configure(config);
+    menuService.items = initialMenuItems;
   }
 }

@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import { MenuService } from '../../services/menu.service';
+
 @Component({
   // tslint:disable-next-line:component-selector
   selector: 'fw-menu',
@@ -8,7 +10,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MenuComponent implements OnInit {
 
-  constructor() { }
+  constructor(private menuService: MenuService) {  }
 
   ngOnInit() {
   }
