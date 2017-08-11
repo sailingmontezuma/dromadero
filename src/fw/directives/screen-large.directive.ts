@@ -1,7 +1,7 @@
 import { Directive, Input, OnDestroy, TemplateRef, ViewContainerRef } from '@angular/core';
+import { Subscription } from 'rxjs/Subscription';
 
 import { ScreenService } from '../services/screen.service';
-import { Subscription } from 'rxjs/Subscription';
 
 @Directive({selector: '[screenLarge]'})
 export class ScreenLarge implements OnDestroy {
