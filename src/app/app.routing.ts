@@ -11,3 +11,4 @@ export const appRoutes: Routes = [
   { path: '', component: DashboardComponent },
   { path: '**', component: DashboardComponent }
 ];
+

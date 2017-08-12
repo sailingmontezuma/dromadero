@@ -12,6 +12,8 @@ import { MenuItem, MenuService } from '../../services/menu.service';
   styleUrls: ['./menu-item.component.css']
 })
 export class MenuItemComponent implements OnInit {
+
+  // @Input() item: MenuItem;
   @Input() item = <MenuItem>null;  // see angular-cli issue #2034
 
   isActiveRoute = false;
@@ -21,7 +23,7 @@ export class MenuItemComponent implements OnInit {
   popupTop = 34;
 
   constructor(private router: Router, private menuService: MenuService,
-              private el: ElementRef, private renderer: Renderer) {  }
+              private el: ElementRef, private renderer: Renderer) {   }
 
   ngOnInit() {
   }
