@@ -12,7 +12,7 @@ import { initialMenuItems } from './app.menu';
 export class AppComponent {
 
   constructor (private frameworkConfigService: FrameworkConfigService,
-              private menuService: MenuService) {
+               private menuService: MenuService) {
 
     const config: FrameworkConfigSettings = {
       socialIcons: [

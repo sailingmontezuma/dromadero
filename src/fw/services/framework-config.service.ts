@@ -1,9 +1,9 @@
 import { Injectable } from '@angular/core';
 
 export interface IconFiles {
-    imageFile: string,
-    alt: string,
-    link: string
+    imageFile: string;
+    alt: string;
+    link: string;
 }
 
 export interface FrameworkConfigSettings {
