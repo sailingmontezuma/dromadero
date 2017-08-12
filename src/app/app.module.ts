@@ -10,13 +10,17 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { CountriesComponent } from './countries/countries.component';
 import { SettingsComponent } from './settings/settings.component';
 import { appRoutes } from './app.routing';
+import { CountryMaintComponent } from './country-maint/country-maint.component';
+import { CountryListComponent } from './country-list/country-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DashboardComponent,
     CountriesComponent,
-    SettingsComponent
+    SettingsComponent,
+    CountryMaintComponent,
+    CountryListComponent
   ],
   imports: [
     BrowserModule,
