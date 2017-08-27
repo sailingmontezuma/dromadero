@@ -42,3 +42,8 @@ nvm list available
 
 npm install -g npm
 
+ npm install -g source-map-explorer nodetree http-server nodemon
+ npm install -g yo
+
+npm install -g @microsoft/sharepoint
+
