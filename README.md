@@ -29,3 +29,11 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 
 ng g component FrameworkBody --prefix=false --spec=false --skip-import=true
+
+npm outdated -g
+list all outdated packages installed globaly
+
+
+
+
+
