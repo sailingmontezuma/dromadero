@@ -34,6 +34,11 @@ npm outdated -g
 list all outdated packages installed globaly
 
 
+npm list -g --depth=0
+npm list --depth=0
+nvm list
+nvm list available
 
 
+npm install -g npm
 
