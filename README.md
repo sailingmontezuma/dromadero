@@ -41,7 +41,19 @@ nvm list available
 
 
 npm install -g npm
+
+
 npm install -g source-map-explorer nodetree http-server nodemon
 npm install -g yo
+
+>>>>>>> d01505872aa4a4492f84f1a40980c16ff3cc8d85
 npm install -g @microsoft/sharepoint
+gulp --tasks
+
+gulp trust-dev-cert
+
+gulp serve --nobrowser
+
+?loadSPFX=true&debugManifestsFile=https://localhost:4321/temp/manifests.js&customActions={"e5625e23-5c5a-4007-a335-e6c2c3afa485":{"location":"ClientSideExtension.ApplicationCustomizer","properties":{"testMessage":"Hello as property!"}}}
+
 
