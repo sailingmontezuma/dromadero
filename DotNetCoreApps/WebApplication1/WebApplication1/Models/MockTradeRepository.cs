@@ -26,7 +26,7 @@ namespace WebApplication1.Models
         }
 
         public IEnumerable<Trade> TradesOfTheMonth { get; }
-        public Trade GeTradeById(Guid id)
+        public Trade GeTradeById(int id)
         {
             throw new NotImplementedException();
         }

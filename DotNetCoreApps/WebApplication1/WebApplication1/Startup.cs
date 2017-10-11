@@ -24,9 +24,11 @@ namespace WebApplication1
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<AppDbContext>(options =>
-                options.UseSqlServer(_configurationRoot.GetConnectionString("DefaultConnection")));
-            services.AddTransient<ICategoryRepository, MockCategoryRepository>();
-            services.AddTransient<ITradeRepository, MockTradeRepository>();
+            options.UseSqlServer(_configurationRoot.GetConnectionString("DefaultConnection")));
+            services.AddTransient<ICategoryRepository, CategoryRepository>();
+            services.AddTransient<ITradeRepository, TradeRepository>();
+            //services.AddTransient<ICategoryRepository, MockCategoryRepository>();
+            //services.AddTransient<ITradeRepository, MockTradeRepository>();
             services.AddMvc();
         }
 

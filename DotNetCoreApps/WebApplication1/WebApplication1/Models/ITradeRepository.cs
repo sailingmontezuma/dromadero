@@ -10,6 +10,6 @@ namespace WebApplication1.Models
         IEnumerable<Trade> Trades { get; }
         IEnumerable<Trade> TradesOfTheMonth { get; }
 
-        Trade GeTradeById(Guid id);
+        Trade GeTradeById(int id);
     }
 }
