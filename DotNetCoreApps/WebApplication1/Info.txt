@@ -4,4 +4,7 @@ Add-Migration Initial
 
 Update-Database
 
+http://localhost:52886/trade/list
 
+"DefaultConnection": "Server=(localdb)\\MSSQLLocalDB;Database=WebApplication1;Trusted_Connection=True;MultipleActiveResultSets=true"
+"DefaultConnection": "Data Source=.;Initial Catalog=er;Integrated Security=True"
