@@ -42,7 +42,7 @@ namespace WebApplication1
             }
             else
             {
-                app.UseExceptionHandler("/TraderErroprPage");
+                app.UseExceptionHandler("/AppException");
             }
             
             app.UseStatusCodePages();
