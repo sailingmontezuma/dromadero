@@ -15,8 +15,12 @@ namespace WebApplication1.Models
             {
                 return new List<Trade>
                 {
-                    new Trade{ IsTradeOfTheMonth = false, PriceOpen = 122.3M, Id = 1, Open = new DateTime(2017, 10, 10, 11, 34, 32, DateTimeKind.Utc)},
-                    new Trade{ IsTradeOfTheMonth = false, PriceOpen = 124.35M, Id = 2, Open = new DateTime(2017, 9, 10, 11, 23, 52, DateTimeKind.Utc)}
+                    new Trade{ IsTradeOfTheMonth = false, PriceOpen = 122.3M, Id = 1, 
+                        Open = new DateTime(2017, 10, 10, 11, 34, 32, DateTimeKind.Utc)},
+                    new Trade{ IsTradeOfTheMonth = false, PriceOpen = 124.35M, Id = 2,
+                        Open = new DateTime(2017, 9, 10, 11, 23, 52, DateTimeKind.Utc)},
+                    new Trade{ IsTradeOfTheMonth = false, PriceOpen = 34.3235M, Id = 3,
+                    Open = new DateTime(2017, 8, 12, 11, 11, 23, DateTimeKind.Utc)}
                 };
             }
         }
