@@ -16,6 +16,7 @@ namespace WebApplication1.Models
         public bool IsTradeOfTheMonth { get; set; }
         public string ImageThumbnailUrl { get; set; }
         public int CategoryId { get; set; }
+        //virtual - is for EF lazy loading only
         public virtual Category Category { get; set; }
     }
 
