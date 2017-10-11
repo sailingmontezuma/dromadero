@@ -1,0 +1,7 @@
+
+EF initial migration CMD:
+Add-Migration Initial
+
+Update-Database
+
+
