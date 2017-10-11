@@ -4,16 +4,5 @@
 
 @foreach (var item in Model.Trades){
    
-    <div class="col-sm-4 col-lg-4 col-md-4">
-        <div class="thumbnail">
-            <img src="@item.ImageThumbnailUrl" alt="">
-            <div class="caption">
-                <h3 class="pull-right">@item.PriceOpen.ToString("c")</h3>
-                <h3>
-                    <a>@item.Name</a>
-                </h3>
-                <p>@item.Description</p>
-            </div>
-        </div>
-    </div>
+    @Html.Partial("TtradeOverviewSummary", item)
 }
