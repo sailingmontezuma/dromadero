@@ -23,7 +23,8 @@ Get-Help Add-Migration init
 Update-Database -Verbose
 
 
-
+ dotnet --version
+ dotnet --info
 
 
 
