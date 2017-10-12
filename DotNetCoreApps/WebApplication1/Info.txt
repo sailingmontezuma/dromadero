@@ -13,3 +13,7 @@ http://localhost:52886/trade/list
 
 "ASPNETCORE_ENVIRONMENT": "Production"
 "ASPNETCORE_ENVIRONMENT": "Development"
+
+
+Install-Package Microsoft.EntityFrameworkCore.SqlServer
+
