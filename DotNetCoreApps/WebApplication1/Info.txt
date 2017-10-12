@@ -20,3 +20,11 @@ Install-Package Microsoft.EntityFrameworkCore.Tools
 Install-Package Microsoft.EntityFrameworkCore.Design
 Get-Help entityframeworkcore
 Get-Help Add-Migration init
+Update-Database -Verbose
+
+
+
+
+
+
+
