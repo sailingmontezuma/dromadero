@@ -13129,11 +13129,11 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "D:\\Sandbox\\dromadero\\DotNetCoreApps\\WebApplication1\\WebApplication1\\WebApplication1.csproj",
+      "projectUniqueName": "C:\\git\\dromadero\\DotNetCoreApps\\WebApplication1\\WebApplication1\\WebApplication1.csproj",
       "projectName": "WebApplication1",
-      "projectPath": "D:\\Sandbox\\dromadero\\DotNetCoreApps\\WebApplication1\\WebApplication1\\WebApplication1.csproj",
+      "projectPath": "C:\\git\\dromadero\\DotNetCoreApps\\WebApplication1\\WebApplication1\\WebApplication1.csproj",
       "packagesPath": "C:\\Users\\Jakub\\.nuget\\packages\\",
-      "outputPath": "D:\\Sandbox\\dromadero\\DotNetCoreApps\\WebApplication1\\WebApplication1\\obj\\",
+      "outputPath": "C:\\git\\dromadero\\DotNetCoreApps\\WebApplication1\\WebApplication1\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
