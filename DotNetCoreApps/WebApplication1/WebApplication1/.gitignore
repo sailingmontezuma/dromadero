@@ -26,6 +26,8 @@ bin/
 obj/
 obj/
 v15/
+[Bb]in/
+[Oo]bj/
 wwwroot/lib
 TestResults/
 ###################
