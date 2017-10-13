@@ -28,4 +28,9 @@ Update-Database -Verbose
 
 
 
+ VS plugins:
+ Open Command Line
+ Create New File
+
+
 

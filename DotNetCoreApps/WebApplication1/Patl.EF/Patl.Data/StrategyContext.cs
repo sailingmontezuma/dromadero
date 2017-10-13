@@ -12,7 +12,7 @@ namespace Patl.Data
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Server=(localdb)\\mssqllocaldb; Database=FxData; Trusted_Connection=True;");
+            optionsBuilder.UseSqlServer("Server=(localdb)\\mssqllocaldb; Database=FxData2; Trusted_Connection=True;");
  
         }
     }
