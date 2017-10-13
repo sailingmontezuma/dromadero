@@ -7,16 +7,25 @@ namespace Patl.Domain
     {
         public Strategy()
         {
-            Trades= new List<Trade>();
+            Trades = new List<Trade>();
+            Comments = new List<Comment>();
         }
         public int Id { get; set; }
+        public DateTime Created { get; set; }
+        public DateTime Modified { get; set; }
+        public bool IsActive { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
-        public string Type { get; set; }
-        public List<Trade> Trades { get; set; }
         public decimal PriceStart { get; set; }
+        public int PriceStartTolerance { get; set; }
         public decimal PriceEnd { get; set; }
+        public int PriceEndTolerance { get; set; }
         public DateTime DateStart { get; set; }
         public DateTime DateEnd { get; set; }
+        public SymbolEnum Symbol { get; set; }
+        public TradeTypeEnum TradeType { get; set; }
+
+        public List<Trade> Trades { get; set; }
+        public List<Comment> Comments { get; set; }
     }
 }
