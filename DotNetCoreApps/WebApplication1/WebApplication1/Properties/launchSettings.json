@@ -12,6 +12,7 @@
       "commandName": "IISExpress",
       "launchBrowser": true,
       "environmentVariables": {
+        "MailSettings__ToAddress": "wedef@rwegergwer.org",
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },

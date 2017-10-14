@@ -4,19 +4,23 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using WebApplication1.Models;
+using WebApplication1.Services;
 
 namespace WebApplication1
 {
     public class Startup
     {
         private IConfigurationRoot _configurationRoot;
+        private IHostingEnvironment _env;
 
         public Startup(IHostingEnvironment hostingEnvironment)
         {
+            _env = hostingEnvironment;
             _configurationRoot = new ConfigurationBuilder()
                 .SetBasePath(hostingEnvironment.ContentRootPath)
                 //.AddJsonFile("appsettings.json")
                 .AddJsonFile($"appsettings.{hostingEnvironment.EnvironmentName}.json", true)
+                //.AddEnvironmentVariables();
                 .Build();
         }
 
@@ -30,6 +34,13 @@ namespace WebApplication1
             //services.AddTransient<ITradeRepository, TradeRepository>();
             services.AddTransient<ICategoryRepository, MockCategoryRepository>();
             services.AddTransient<ITradeRepository, MockTradeRepository>();
+
+            services.AddSingleton(_configurationRoot);
+            if (_env.IsEnvironment("Development") || _env.IsEnvironment("Testing") || _env.IsEnvironment("Staging"))
+            {
+                services.AddScoped<IMailService, DebugMailService>(); //scope of a single request
+            }
+            else   { }  // Implement a real Mail Service
             services.AddMvc();
         }
 
