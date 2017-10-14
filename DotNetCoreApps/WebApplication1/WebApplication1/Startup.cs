@@ -45,13 +45,16 @@ namespace WebApplication1
             {
                 app.UseExceptionHandler("/AppException");
             }
-            
             app.UseStatusCodePages();
+            app.UseDefaultFiles();
             app.UseStaticFiles();
             app.UseMvcWithDefaultRoute();
-
+            //app.UseMvc(pp =>
+            //{
+            //    pp.MapRoute(name: "fg", template: "{controller}/bsr/gt{rt?}",
+            //        defaults: new {controller = "App", action = "Index"})
+            //});
             //DbInitializer.Seed(app);
         }
-
     }
 }

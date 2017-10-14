@@ -28,6 +28,11 @@ namespace WebApplication1.Controllers
             return View(tradesListViewModel);
         }
 
+        public IActionResult Trap()
+        {
+            throw new InvalidOperationException("zlo w czystej postaci sie stalo");
+        }
+
         public IActionResult Index()
         {
             return View();
