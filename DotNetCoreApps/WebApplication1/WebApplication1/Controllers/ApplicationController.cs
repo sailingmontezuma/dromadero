@@ -17,7 +17,10 @@ namespace WebApplication1.Views
         {
             return View();
         }
-
+        public IActionResult Contact()
+        {
+            return View();
+        }
         public IActionResult Error()
         {
             throw new InvalidOperationException("raz dwa trzy babajaga patrzy");
