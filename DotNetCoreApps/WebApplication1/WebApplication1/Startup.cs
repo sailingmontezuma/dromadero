@@ -18,7 +18,7 @@ namespace WebApplication1
             _env = hostingEnvironment;
             _configurationRoot = new ConfigurationBuilder()
                 .SetBasePath(hostingEnvironment.ContentRootPath)
-                //.AddJsonFile("appsettings.json")
+                //.AddJsonFile("appsettings.json") //development, production, stage
                 .AddJsonFile($"appsettings.{hostingEnvironment.EnvironmentName}.json", true)
                 //.AddEnvironmentVariables();
                 .Build();
@@ -30,13 +30,14 @@ namespace WebApplication1
         {
             services.AddDbContext<AppDbContext>(options =>
                 options.UseSqlServer(_configurationRoot.GetConnectionString("DefaultConnection")));
+
             //services.AddTransient<ICategoryRepository, CategoryRepository>();
             //services.AddTransient<ITradeRepository, TradeRepository>();
             services.AddTransient<ICategoryRepository, MockCategoryRepository>();
             services.AddTransient<ITradeRepository, MockTradeRepository>();
 
             services.AddSingleton(_configurationRoot);
-            if (_env.IsEnvironment("Development") || _env.IsEnvironment("Testing") || _env.IsEnvironment("Staging"))
+            if (_env.IsEnvironment("Development") || _env.IsEnvironment("Production") || _env.IsEnvironment("Stage"))
             {
                 services.AddScoped<IMailService, DebugMailService>(); //scope of a single request
             }

@@ -1,4 +1,6 @@
 
+Price Action Trading Log
+
 EF initial migration CMD:
 Add-Migration Initial
 

@@ -40,6 +40,8 @@ namespace WebApplication1.Views
                 ModelState.AddModelError("", "We don't support AOL addresses");
             }
 
+            string emailaddress = _config["MailSettings:ToAddress"];
+
             if (ModelState.IsValid)
             {
                 _mailService.SendMail(_config["MailSettings:ToAddress"], model.Email, "From TheWorld", model.Message);
