@@ -28,6 +28,7 @@ Update-Database -Verbose
 dotnet --version
 dotnet --info
 dotnet ef migrations add InitialDatabase
+dotnet ef database update
 
 
  VS plugins:
