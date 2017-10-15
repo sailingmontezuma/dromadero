@@ -25,9 +25,9 @@ Get-Help Add-Migration init
 Update-Database -Verbose
 
 
- dotnet --version
- dotnet --info
-
+dotnet --version
+dotnet --info
+dotnet ef migrations add InitialDatabase
 
 
  VS plugins:
