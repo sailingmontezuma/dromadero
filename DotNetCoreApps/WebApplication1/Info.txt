@@ -34,5 +34,5 @@ Update-Database -Verbose
  Open Command Line
  Create New File
 
-
+"ConnectionStrings": { "WorldContextConnection": "Server=(localdb)\\MSSQLLocalDb;Database=TheWorldDb;Trusted_Connection=true;MultipleActiveResultSets=true;"}
 
