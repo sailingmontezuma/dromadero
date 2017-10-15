@@ -20,7 +20,7 @@ namespace WebApplication1
                 .SetBasePath(hostingEnvironment.ContentRootPath)
                 //.AddJsonFile("appsettings.json") //development, production, stage
                 .AddJsonFile($"appsettings.{hostingEnvironment.EnvironmentName}.json", true)
-                //.AddEnvironmentVariables();
+                //.AddEnvironmentVariables(); //overrides config stored in appsetting configuration file
                 .Build();
         }
 
