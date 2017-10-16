@@ -3,10 +3,10 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using WebApplication1.Models;
-using WebApplication1.Services;
+using Patl.WebApp.Models;
+using Patl.WebApp.Services;
 
-namespace WebApplication1
+namespace Patl.WebApp
 {
     public class Startup
     {

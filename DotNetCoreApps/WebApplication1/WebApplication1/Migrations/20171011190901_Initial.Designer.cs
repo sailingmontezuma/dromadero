@@ -6,9 +6,9 @@ using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage;
 using Microsoft.EntityFrameworkCore.Storage.Internal;
 using System;
-using WebApplication1.Models;
+using Patl.WebApp.Models;
 
-namespace WebApplication1.Migrations
+namespace Patl.WebApp.Migrations
 {
     [DbContext(typeof(AppDbContext))]
     [Migration("20171011190901_Initial")]
@@ -21,7 +21,7 @@ namespace WebApplication1.Migrations
                 .HasAnnotation("ProductVersion", "2.0.0-rtm-26452")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-            modelBuilder.Entity("WebApplication1.Models.Category", b =>
+            modelBuilder.Entity("Patl.WebApp.Models.Category", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd();
@@ -33,7 +33,7 @@ namespace WebApplication1.Migrations
                     b.ToTable("Categories");
                 });
 
-            modelBuilder.Entity("WebApplication1.Models.Trade", b =>
+            modelBuilder.Entity("Patl.WebApp.Models.Trade", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd();
@@ -69,9 +69,9 @@ namespace WebApplication1.Migrations
                     b.ToTable("Trades");
                 });
 
-            modelBuilder.Entity("WebApplication1.Models.Trade", b =>
+            modelBuilder.Entity("Patl.WebApp.Models.Trade", b =>
                 {
-                    b.HasOne("WebApplication1.Models.Category", "Category")
+                    b.HasOne("Patl.WebApp.Models.Category", "Category")
                         .WithMany("Trades")
                         .HasForeignKey("CategoryId1");
                 });

@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using WebApplication1.Models;
-using WebApplication1.ViewModels;
+using Patl.WebApp.Models;
+using Patl.WebApp.ViewModels;
 
-namespace WebApplication1.Controllers
+namespace Patl.WebApp.Controllers
 {
     public class TradeController : Microsoft.AspNetCore.Mvc.Controller
     {

@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace WebApplication1.ViewModels
+namespace Patl.WebApp.ViewModels
 {
     public class ContactViewModel
     {

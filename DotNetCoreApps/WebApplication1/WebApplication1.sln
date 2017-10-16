@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27004.2002
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApplication1", "WebApplication1\WebApplication1.csproj", "{10A84D7D-D625-4B34-BA7C-5E405748F114}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Patl.WebApp", "WebApplication1\Patl.WebApp.csproj", "{10A84D7D-D625-4B34-BA7C-5E405748F114}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Info", "Info", "{DD274C0B-3918-448C-A959-026141A1859B}"
 	ProjectSection(SolutionItems) = preProject
@@ -11,13 +11,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Info", "Info", "{DD274C0B-3
 		Info.txt = Info.txt
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Patl.WebApi", "Patl.WebApi\Patl.WebApi.csproj", "{96816F7A-A6F8-44B9-A565-998B07CECC1A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Patl.WebApi", "Patl.WebApi\Patl.WebApi.csproj", "{96816F7A-A6F8-44B9-A565-998B07CECC1A}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Patl.Domain", "Patl.Domain\Patl.Domain.csproj", "{AF901679-3C43-4492-9827-F2EC51ACF87F}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Patl.Data", "Patl.Data\Patl.Data.csproj", "{7DA0C926-8324-4A53-A5B5-3D897FE2D205}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Patl.UiConsole", "Patl.Console\Patl.UiConsole.csproj", "{042B9232-09C2-4F23-A9BF-C75D1B594278}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Patl.UiConsole", "Patl.Console\Patl.UiConsole.csproj", "{042B9232-09C2-4F23-A9BF-C75D1B594278}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

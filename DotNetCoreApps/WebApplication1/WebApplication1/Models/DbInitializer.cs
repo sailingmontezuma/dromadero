@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace WebApplication1.Models
+namespace Patl.WebApp.Models
 {
     public static class DbInitializer
     {

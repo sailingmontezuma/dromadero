@@ -1,10 +1,10 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using System;
 using Microsoft.Extensions.Configuration;
-using WebApplication1.Services;
-using WebApplication1.ViewModels;
+using Patl.WebApp.Services;
+using Patl.WebApp.ViewModels;
 
-namespace WebApplication1.Views
+namespace Patl.WebApp.Views
 {
     public class ApplicationController : Controller
     {

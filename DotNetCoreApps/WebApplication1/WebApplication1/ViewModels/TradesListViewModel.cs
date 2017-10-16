@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using WebApplication1.Models;
+using Patl.WebApp.Models;
 
-namespace WebApplication1.ViewModels
+namespace Patl.WebApp.ViewModels
 {
     public class TradesListViewModel
     {

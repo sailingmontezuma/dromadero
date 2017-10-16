@@ -1,6 +1,6 @@
 ﻿using System.Diagnostics;
 
-namespace WebApplication1.Services
+namespace Patl.WebApp.Services
 {
     public class DebugMailService : IMailService
     {

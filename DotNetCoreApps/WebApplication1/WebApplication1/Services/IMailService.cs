@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace WebApplication1.Services
+namespace Patl.WebApp.Services
 {
     public interface IMailService
     {
