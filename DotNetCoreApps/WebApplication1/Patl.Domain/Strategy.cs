@@ -25,6 +25,13 @@ namespace Patl.Domain
         public SymbolEnum Symbol { get; set; }
         public TradeTypeEnum TradeType { get; set; }
 
+        /// <summary>
+        /// Strategy relelated to.
+        /// As a follow up
+        /// </summary>
+        public int ParentStrategyId { get; set; }
+        public virtual Strategy ParentStrategy { get; set; }
+
         public List<Trade> Trades { get; set; }
         public List<Comment> Comments { get; set; }
     }
