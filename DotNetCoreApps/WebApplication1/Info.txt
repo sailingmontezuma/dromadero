@@ -6,6 +6,7 @@ Add-Migration Initial
 
 Update-Database
 Update-Database -Context AppDbContext -Environment Production
+Update-Database -verbose
 
 
 http://localhost:52886/trade/list
@@ -20,6 +21,7 @@ http://localhost:52886/trade/list
 Install-Package Microsoft.EntityFrameworkCore.SqlServer
 Install-Package Microsoft.EntityFrameworkCore.Tools
 Install-Package Microsoft.EntityFrameworkCore.Design
+Install-Package Microsoft.EntityFrameworkCore.Tools.DotNet
 Get-Help entityframeworkcore
 Get-Help Add-Migration init
 Update-Database -Verbose
@@ -29,11 +31,15 @@ dotnet --version
 dotnet --info
 dotnet ef migrations add InitialDatabase
 dotnet ef database update
+dotnet add .\ClassLibrary2.csproj package Microsoft.entityframeworkcore.tools
+dotnet add .\ClassLibrary2.csproj package Microsoft.entityframeworkcore.Design
+dotnet restore
+dotnet build
 
 
- VS plugins:
- Open Command Line
- Create New File
+VS plugins:
+Open Command Line
+Create New File
 
 "ConnectionStrings": { "WorldContextConnection": "Server=(localdb)\\MSSQLLocalDb;Database=TheWorldDb;Trusted_Connection=true;MultipleActiveResultSets=true;"}
 
