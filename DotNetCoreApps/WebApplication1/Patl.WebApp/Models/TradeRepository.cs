@@ -27,7 +27,7 @@ namespace Patl.WebApp.Models
 
         public Trade GeTradeById(int id)
         {
-            return _appDbContext.Trades.FirstOrDefault(t => t.Id == id);
+            return _appDbContext.Trades.FirstOrDefault(t => t.TradeId == id);
         }
     }
 }

@@ -15,11 +15,11 @@ namespace Patl.WebApp.Models
             {
                 return new List<Trade>
                 {
-                    new Trade{ IsTradeOfTheMonth = false, PriceOpen = 122.3M, Id = 1, ImageThumbnailUrl = "/Images/carousel1.jpg", Description = "trade 1",
+                    new Trade{ IsTradeOfTheMonth = false, PriceOpen = 122.3M, TradeId = 1, ImageThumbnailUrl = "/Images/carousel1.jpg", Description = "trade 1",
                         Open = new DateTime(2017, 10, 10, 11, 34, 32, DateTimeKind.Utc), Name = "trade number one"},
-                    new Trade{ IsTradeOfTheMonth = false, PriceOpen = 124.35M, Id = 2, ImageThumbnailUrl = "/Images/carousel2.jpg", Description = "trade 2",
+                    new Trade{ IsTradeOfTheMonth = false, PriceOpen = 124.35M, TradeId = 2, ImageThumbnailUrl = "/Images/carousel2.jpg", Description = "trade 2",
                         Open = new DateTime(2017, 9, 10, 11, 23, 52, DateTimeKind.Utc), Name = "trade number two"},
-                    new Trade{ IsTradeOfTheMonth = false, PriceOpen = 34.3235M, Id = 3, ImageThumbnailUrl = "/Images/carousel3.jpg", Description = "trade 3",
+                    new Trade{ IsTradeOfTheMonth = false, PriceOpen = 34.3235M, TradeId = 3, ImageThumbnailUrl = "/Images/carousel3.jpg", Description = "trade 3",
                     Open = new DateTime(2017, 8, 12, 11, 11, 23, DateTimeKind.Utc), Name = "trade three"}
                 };
             }

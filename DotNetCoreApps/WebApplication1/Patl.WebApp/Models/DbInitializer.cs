@@ -25,7 +25,7 @@ namespace Patl.WebApp.Models
                     {
                         Name = "Catch up trend",
                         Description = "quickly react on side up",
-                        Id = 1,
+                        TradeId = 1,
                         IsTradeOfTheMonth = false,
                         PriceOpen = 1.24432M,
                         PriceClose = 1.223345M,
@@ -38,7 +38,7 @@ namespace Patl.WebApp.Models
                     {
                         Name = "Close as soon as possible",
                         Description = "bad trade",
-                        Id = 2,
+                        TradeId = 2,
                         IsTradeOfTheMonth = false,
                         PriceOpen = 1.1134M,
                         PriceClose = 1.03455M,
@@ -46,8 +46,7 @@ namespace Patl.WebApp.Models
                         Symbol = "GBPUSD",
                         Open = new DateTime(2017, 10, 3, 9, 34, 11, DateTimeKind.Utc),
                         Close = new DateTime(2017, 10, 6, 9, 38, 55, DateTimeKind.Utc)
-                    }
-                    
+                    }      
                   );
             }
             context.SaveChanges();
@@ -58,7 +57,6 @@ namespace Patl.WebApp.Models
         #region Categories
 
         private static Dictionary<string, Category> categories;
-
         public static Dictionary<string, Category> Categories
         {
             get
@@ -67,7 +65,7 @@ namespace Patl.WebApp.Models
                 {
                     var genresList = new Category[]
                     {
-                        new Category {  Name = "Fruit pies" },
+                        new Category { Name = "Fruit pies" },
                         new Category { Name = "Cheese cakes" },
                         new Category { Name = "Seasonal pies" }
                     };
@@ -79,7 +77,6 @@ namespace Patl.WebApp.Models
                         categories.Add(genre.Name, genre);
                     }
                 }
-
                 return categories;
             }
         }

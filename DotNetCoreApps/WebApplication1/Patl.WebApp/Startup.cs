@@ -10,8 +10,8 @@ namespace Patl.WebApp
 {
     public class Startup
     {
-        private IConfigurationRoot _configurationRoot;
-        private IHostingEnvironment _env;
+        private readonly IConfigurationRoot _configurationRoot;
+        private readonly IHostingEnvironment _env;
 
         public Startup(IHostingEnvironment hostingEnvironment)
         {
@@ -28,13 +28,15 @@ namespace Patl.WebApp
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
+            var tempTestConnectionString = _configurationRoot.GetConnectionString("DefaultConnection");
+
             services.AddDbContext<AppDbContext>(options =>
                 options.UseSqlServer(_configurationRoot.GetConnectionString("DefaultConnection")));
 
-            //services.AddTransient<ICategoryRepository, CategoryRepository>();
-            //services.AddTransient<ITradeRepository, TradeRepository>();
-            services.AddTransient<ICategoryRepository, MockCategoryRepository>();
-            services.AddTransient<ITradeRepository, MockTradeRepository>();
+            services.AddTransient<ICategoryRepository, CategoryRepository>();
+            services.AddTransient<ITradeRepository, TradeRepository>();
+            //services.AddTransient<ICategoryRepository, MockCategoryRepository>();
+            //services.AddTransient<ITradeRepository, MockTradeRepository>();
 
             services.AddSingleton(_configurationRoot);
             if (_env.IsEnvironment("Development") || _env.IsEnvironment("Production") || _env.IsEnvironment("Stage"))
@@ -66,7 +68,7 @@ namespace Patl.WebApp
             //    pp.MapRoute(name: "fg", template: "{controller}/bsr/gt{rt?}",
             //        defaults: new {controller = "App", action = "Index"})
             //});
-            //DbInitializer.Seed(app);
+            DbInitializer.Seed(app);
         }
     }
 }

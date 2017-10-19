@@ -18,7 +18,7 @@ namespace Patl.WebApp.Controllers
 
         public ViewResult List()
         {
-            throw new AccessViolationException("defwef");
+ 
             TradesListViewModel tradesListViewModel = new TradesListViewModel();
             tradesListViewModel.Trades = _tradeRepository.Trades;
             ViewBag.CurrentCategory = "cheese";
