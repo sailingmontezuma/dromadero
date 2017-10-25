@@ -1,0 +1,99 @@
+﻿@model WebApplication3.Models.Strategy
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Strategy</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Created)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Created)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Modified)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Modified)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.IsActive)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.IsActive)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Description)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PriceStart)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PriceStart)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PriceStartTolerance)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PriceStartTolerance)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PriceEnd)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PriceEnd)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PriceEndTolerance)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PriceEndTolerance)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DateStart)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DateStart)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DateEnd)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DateEnd)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Symbol)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Symbol)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TradeType)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TradeType)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Id" />
+        <input type="submit" value="Delete" class="btn btn-default" /> |
+        <a asp-action="Index">Back to List</a>
+    </form>
+</div>

@@ -41,3 +41,7 @@ yarn-error.log
 # System Files
 .DS_Store
 Thumbs.db
+/DotNetCoreApps/WebApplication3/.vs
+/DotNetCoreApps/WebApplication3/WebApplication3/bin/Debug/netcoreapp2.0
+/DotNetCoreApps/WebApplication3/WebApplication3/obj
+/DotNetCoreApps/WebApplication3/WebApplication3/wwwroot/lib

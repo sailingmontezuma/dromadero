@@ -1,0 +1,95 @@
+﻿@model WebApplication3.Models.Strategy
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h2>Create</h2>
+
+<h4>Strategy</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Created" class="control-label"></label>
+                <input asp-for="Created" class="form-control" />
+                <span asp-validation-for="Created" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Modified" class="control-label"></label>
+                <input asp-for="Modified" class="form-control" />
+                <span asp-validation-for="Modified" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <div class="checkbox">
+                    <label>
+                        <input asp-for="IsActive" /> @Html.DisplayNameFor(model => model.IsActive)
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label asp-for="Name" class="control-label"></label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Description" class="control-label"></label>
+                <input asp-for="Description" class="form-control" />
+                <span asp-validation-for="Description" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PriceStart" class="control-label"></label>
+                <input asp-for="PriceStart" class="form-control" />
+                <span asp-validation-for="PriceStart" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PriceStartTolerance" class="control-label"></label>
+                <input asp-for="PriceStartTolerance" class="form-control" />
+                <span asp-validation-for="PriceStartTolerance" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PriceEnd" class="control-label"></label>
+                <input asp-for="PriceEnd" class="form-control" />
+                <span asp-validation-for="PriceEnd" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PriceEndTolerance" class="control-label"></label>
+                <input asp-for="PriceEndTolerance" class="form-control" />
+                <span asp-validation-for="PriceEndTolerance" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DateStart" class="control-label"></label>
+                <input asp-for="DateStart" class="form-control" />
+                <span asp-validation-for="DateStart" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DateEnd" class="control-label"></label>
+                <input asp-for="DateEnd" class="form-control" />
+                <span asp-validation-for="DateEnd" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Symbol" class="control-label"></label>
+                <select asp-for="Symbol" class="form-control"></select>
+                <span asp-validation-for="Symbol" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TradeType" class="control-label"></label>
+                <select asp-for="TradeType" class="form-control"></select>
+                <span asp-validation-for="TradeType" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
