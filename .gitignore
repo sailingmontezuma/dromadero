@@ -45,3 +45,7 @@ Thumbs.db
 /DotNetCoreApps/WebApplication3/WebApplication3/bin/Debug/netcoreapp2.0
 /DotNetCoreApps/WebApplication3/WebApplication3/obj
 /DotNetCoreApps/WebApplication3/WebApplication3/wwwroot/lib
+/DotNetCoreApps/WebApplication2/.vs
+/DotNetCoreApps/WebApplication2/WebApplication2/bin/Debug/netcoreapp2.0
+/DotNetCoreApps/WebApplication2/WebApplication2/obj
+/DotNetCoreApps/WebApplication2/WebApplication2/wwwroot/lib
