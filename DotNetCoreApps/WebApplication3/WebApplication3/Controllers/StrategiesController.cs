@@ -54,13 +54,22 @@ namespace WebApplication3.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Created,Modified,IsActive,Name,Description,PriceStart,PriceStartTolerance,PriceEnd,PriceEndTolerance,DateStart,DateEnd,Symbol,TradeType")] Strategy strategy)
+        public async Task<IActionResult> Create([Bind("IsActive,Name,Description,PriceStart,PriceEnd,DateStart,DateEnd,Symbol,TradeType")] Strategy strategy)
         {
-            if (ModelState.IsValid)
+            try
             {
-                _context.Add(strategy);
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                if (ModelState.IsValid)
+                {
+                    _context.Add(strategy);
+                    await _context.SaveChangesAsync();
+                    return RedirectToAction(nameof(Index));
+                }
+            }
+            catch (DbUpdateException)
+            {
+                ModelState.AddModelError("", "Unable to save changes. " +
+                                             "Try again, and if the problem persists " +
+                                             "see your system administrator.");
             }
             return View(strategy);
         }
