@@ -17,18 +17,6 @@
             @Html.DisplayFor(model => model.Created)
         </dd>
         <dt>
-            @Html.DisplayNameFor(model => model.Modified)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.Modified)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.IsActive)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.IsActive)
-        </dd>
-        <dt>
             @Html.DisplayNameFor(model => model.Name)
         </dt>
         <dd>
@@ -47,46 +35,22 @@
             @Html.DisplayFor(model => model.PriceStart)
         </dd>
         <dt>
-            @Html.DisplayNameFor(model => model.PriceStartTolerance)
+            @Html.DisplayNameFor(model => model.PriceStopLoss)
         </dt>
         <dd>
-            @Html.DisplayFor(model => model.PriceStartTolerance)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.PriceEnd)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.PriceEnd)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.PriceEndTolerance)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.PriceEndTolerance)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.DateStart)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.DateStart)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.DateEnd)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.DateEnd)
+            @Html.DisplayFor(model => model.PriceStopLoss)
         </dd>
         <dt>
             @Html.DisplayNameFor(model => model.Symbol)
         </dt>
         <dd>
-            @Html.DisplayFor(model => model.Symbol)
+            @Html.DisplayFor(model => model.Symbol.Name)
         </dd>
         <dt>
             @Html.DisplayNameFor(model => model.TradeType)
         </dt>
         <dd>
-            @Html.DisplayFor(model => model.TradeType)
+            @Html.DisplayFor(model => model.TradeType.Name)
         </dd>
     </dl>
 </div>

@@ -22,7 +22,8 @@ namespace WebApplication3.Controllers
         // GET: Strategies
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Strategies.ToListAsync());
+            var fxContext = _context.Strategies.Include(s => s.Symbol).Include(s => s.TradeType);
+            return View(await fxContext.ToListAsync());
         }
 
         // GET: Strategies/Details/5
@@ -34,6 +35,8 @@ namespace WebApplication3.Controllers
             }
 
             var strategy = await _context.Strategies
+                .Include(s => s.Symbol)
+                .Include(s => s.TradeType)
                 .SingleOrDefaultAsync(m => m.Id == id);
             if (strategy == null)
             {
@@ -46,6 +49,8 @@ namespace WebApplication3.Controllers
         // GET: Strategies/Create
         public IActionResult Create()
         {
+            ViewData["SymbolId"] = new SelectList(_context.Symbols, "Id", "Name");
+            ViewData["TradeTypeId"] = new SelectList(_context.TradeTypes, "Id", "Name");
             return View();
         }
 
@@ -54,23 +59,16 @@ namespace WebApplication3.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("IsActive,Name,Description,PriceStart,PriceEnd,DateStart,DateEnd,Symbol,TradeType")] Strategy strategy)
+        public async Task<IActionResult> Create([Bind("Id,Created,Name,Description,PriceStart,PriceStopLoss,SymbolId,TradeTypeId")] Strategy strategy)
         {
-            try
+            if (ModelState.IsValid)
             {
-                if (ModelState.IsValid)
-                {
-                    _context.Add(strategy);
-                    await _context.SaveChangesAsync();
-                    return RedirectToAction(nameof(Index));
-                }
+                _context.Add(strategy);
+                await _context.SaveChangesAsync();
+                return RedirectToAction(nameof(Index));
             }
-            catch (DbUpdateException)
-            {
-                ModelState.AddModelError("", "Unable to save changes. " +
-                                             "Try again, and if the problem persists " +
-                                             "see your system administrator.");
-            }
+            ViewData["SymbolId"] = new SelectList(_context.Symbols, "Id", "Name", strategy.SymbolId);
+            ViewData["TradeTypeId"] = new SelectList(_context.TradeTypes, "Id", "Name", strategy.TradeTypeId);
             return View(strategy);
         }
 
@@ -87,6 +85,8 @@ namespace WebApplication3.Controllers
             {
                 return NotFound();
             }
+            ViewData["SymbolId"] = new SelectList(_context.Symbols, "Id", "Name", strategy.SymbolId);
+            ViewData["TradeTypeId"] = new SelectList(_context.TradeTypes, "Id", "Name", strategy.TradeTypeId);
             return View(strategy);
         }
 
@@ -95,7 +95,7 @@ namespace WebApplication3.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Created,Modified,IsActive,Name,Description,PriceStart,PriceStartTolerance,PriceEnd,PriceEndTolerance,DateStart,DateEnd,Symbol,TradeType")] Strategy strategy)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Created,Name,Description,PriceStart,PriceStopLoss,SymbolId,TradeTypeId")] Strategy strategy)
         {
             if (id != strategy.Id)
             {
@@ -122,6 +122,8 @@ namespace WebApplication3.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
+            ViewData["SymbolId"] = new SelectList(_context.Symbols, "Id", "Name", strategy.SymbolId);
+            ViewData["TradeTypeId"] = new SelectList(_context.TradeTypes, "Id", "Name", strategy.TradeTypeId);
             return View(strategy);
         }
 
@@ -134,6 +136,8 @@ namespace WebApplication3.Controllers
             }
 
             var strategy = await _context.Strategies
+                .Include(s => s.Symbol)
+                .Include(s => s.TradeType)
                 .SingleOrDefaultAsync(m => m.Id == id);
             if (strategy == null)
             {
